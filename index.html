@@ -18,16 +18,32 @@
         p {
             font-size: 1.2em;
         }
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .cat-image {
+            position: absolute;
+            top: -20px; /* Adjust position as needed */
+            left: -20px; /* Adjust position as needed */
+            width: 100px; /* Adjust size as needed */
+            height: auto;
+            z-index: 1; /* Ensure cat image is behind the main image */
+        }
         img {
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 2; /* Ensure the main image is above the cat image */
         }
     </style>
 </head>
 <body>
     <h1>My Girlfriend</h1>
     <p>This is a special page for you, MAMA!</p>
-    <img src="37960.jpg" alt="MAMA So CUTEST" style="max-width: 100%; height: auto;"> 
+    <div class="image-container">
+        <img class="cat-image" src="CATBLACK.jpg" alt="Cat" />
+        <img src="37960.jpg" alt="MAMA So CUTEST" style="max-width: 100%; height: auto;"> 
+    </div>
     <p>She is the cutest person in the world!</p>
 </body>
 </html>
